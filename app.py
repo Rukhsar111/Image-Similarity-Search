@@ -132,6 +132,23 @@ def retrieve_similar_images(query, model, index, image_paths, top_k=3):
 import streamlit as st
 from PIL import Image
 
+
+import requests
+
+def download_image(img_path):
+    local_path = os.path.join(BASE_DIR, img_path)
+    # https://raw.githubusercontent.com/<Rukhsar111>/<Image-Similarity-Search.git>/<main>/data/merged/
+    github_repo_url = "https://raw.githubusercontent.com/<Rukhsar111>/<Image-Similarity-Search.git>/<main>/data/merged/"
+    img_url = github_repo_url + img_path
+    
+    if not os.path.exists(local_path):
+        response = requests.get(img_url)
+        with open(local_path, 'wb') as f:
+            f.write(response.content)
+        print(f"Downloaded {img_path}")
+    return local_path
+
+
 def visualize_results(query_image, retrieved_images, container_width=5):
     """
     Visualize the query image and the retrieved similar images in a grid layout.
@@ -142,7 +159,7 @@ def visualize_results(query_image, retrieved_images, container_width=5):
     - columns_per_row: Number of columns to display per row in the grid.
     """
     # Display the query image
-    # st.image(query, caption="Query Image", use_column_width=True)
+    # github_repo_url = "https://raw.githubusercontent.com/<Rukhsar111>/<Image-Similarity-Search.git>/<main>/data/merged/"
     st.header(f" Retrived Simailar Images Using : {model.upper()}")
 
     # Display the retrieved images in a grid
@@ -151,11 +168,10 @@ def visualize_results(query_image, retrieved_images, container_width=5):
         for j, col in enumerate(cols):
             if i + j < len(retrieved_images):
                 img_path = retrieved_images[i + j]
-                # img_path = f'/mount/src/'+ img_path  # Ensures images are correctly referenced
-                img_path = os.path.join(BASE_DIR, img_path)
+                img_path=download_image(img_path=img_path)
                 print('new_path', img_path)
                 img = Image.open(img_path)
-                col.image(img, caption=f"Match {i + j + 1}", use_container_width=True)
+                col.image(img_path, caption=f"Match {i + j + 1}", use_container_width=True)
 
    
         
