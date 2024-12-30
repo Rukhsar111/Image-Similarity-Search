@@ -90,3 +90,7 @@ https://image-similarity-search-ekwtcdyte3hcwgyqhsh25c.streamlit.app/
 * Hugging Face Transformers: For providing the pre-trained models (ResNet, CLIP, DinoV2, ViT).
 * Faiss: For enabling efficient similarity search and retrieval.
 * Streamlit: For providing a simple interface to interact with the application.
+
+# References
+- Alexey Dosovitskiy, et al., AN IMAGE IS WORTH 16X16 WORDS: TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE (2020), Arxiv
+- Maxime Oquab, Timothée Darcet, Théo Moutakanni, et.al., DINOv2: Learning Robust Visual Features without Supervision (2023), Arxiv  
