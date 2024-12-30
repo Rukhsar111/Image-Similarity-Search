@@ -7,6 +7,12 @@ from transformers import (AutoImageProcessor, AutoModel, Dinov2Model, ViTModel, 
 import matplotlib.pyplot as plt
 import os
 
+import sys
+from pathlib import Path
+
+dir = Path(__file__).resolve()
+sys.path.append(str(dir.parent.parent))
+
 # Base class for embedding extraction
 class BaseEmbeddingExtractor:
     def __init__(self, image):
@@ -209,10 +215,14 @@ def main():
 
             # Perform the similarity search
             retrieved_images = retrieve_similar_images(query_image, model, index, image_paths, top_k=6)
+            print('retrieved_images',  retrieved_images)
         
             # Visualize the results
             visualize_results(query_image, retrieved_images,container_width=5)
 
 
+
+
 if __name__ == "__main__":
+    #call the main function to execue the code.
     main()
