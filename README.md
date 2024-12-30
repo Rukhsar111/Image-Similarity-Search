@@ -92,5 +92,6 @@ https://image-similarity-search-ekwtcdyte3hcwgyqhsh25c.streamlit.app/
 * Streamlit: For providing a simple interface to interact with the application.
 
 # References
-- Alexey Dosovitskiy, et al., AN IMAGE IS WORTH 16X16 WORDS: TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE (2020), Arxiv
-- Maxime Oquab, Timothée Darcet, Théo Moutakanni, et.al., DINOv2: Learning Robust Visual Features without Supervision (2023), Arxiv  
+[1] Alexey Dosovitskiy, et al., AN IMAGE IS WORTH 16X16 WORDS: TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE (2020), Arxiv  
+[2] Maxime Oquab, Timothée Darcet, Théo Moutakanni, et.al., DINOv2: Learning Robust Visual Features without Supervision (2023), Arxiv  
+[3] A. Radford, et al. Learning Transferable Visual Models From Natural Language Supervision (2021)  
