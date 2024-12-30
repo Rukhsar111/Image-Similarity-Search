@@ -14,7 +14,7 @@ from pathlib import Path
 # sys.path.append(str(dir.parent.parent))
 
 BASE_DIR = Path(__file__).parent
-INDEX_DIR = BASE_DIR / 'faiss_indexes'
+# data_path = BASE_DIR / "data/merged"
 
 # Base class for embedding extraction
 class BaseEmbeddingExtractor:
@@ -151,7 +151,8 @@ def visualize_results(query_image, retrieved_images, container_width=5):
         for j, col in enumerate(cols):
             if i + j < len(retrieved_images):
                 img_path = retrieved_images[i + j]
-                img_path = f'/mount/src/'+ img_path  # Ensures images are correctly referenced
+                # img_path = f'/mount/src/'+ img_path  # Ensures images are correctly referenced
+                img_path = os.path.join(BASE_DIR, img_path)
                 print('new_path', img_path)
                 img = Image.open(img_path)
                 col.image(img, caption=f"Match {i + j + 1}", use_container_width=True)
