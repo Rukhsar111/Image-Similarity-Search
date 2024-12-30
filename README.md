@@ -77,6 +77,16 @@ This will start the Streamlit app, allowing you to upload query images and perfo
 2. Model Selection: Automatically Select  one of the pre-trained and fine-tuned models (ResNet, CLIP, DinoV2, or ViT) for similarity search.
 3. View Results: View the top-k similar images retrieved from the dataset based on the query image’s embedding.
 
+# Application Demo Link
+https://image-similarity-search-ekwtcdyte3hcwgyqhsh25c.streamlit.app/
+
+![Screenshot (2921)](https://github.com/user-attachments/assets/96f153b9-ae7f-4c45-b29c-c11d5b2ebcd4)
+![Screenshot (2919)](https://github.com/user-attachments/assets/5146faa2-4c8d-4b2e-8968-4856ee31079f)
+![Screenshot (2920)](https://github.com/user-attachments/assets/7b462d78-ad33-46f1-8806-9c56d828bfad)
+
+
+
+
 # Acknowledgments  
 * Hugging Face Transformers: For providing the pre-trained models (ResNet, CLIP, DinoV2, ViT).
 * Faiss: For enabling efficient similarity search and retrieval.
