@@ -10,6 +10,11 @@ This project implements an Image Similarity Search application that leverages po
   * Faiss Indexing: Efficient similarity search is achieved using Faiss for fast nearest neighbor retrieval.
   * Custom Dataset: The custom dataset includes images of watches and shoes, and has been curated to improve model performance in these categories.
 
+![Screenshot (2921)](https://github.com/user-attachments/assets/29d72dec-3ebe-4b8a-ba6f-fac2c65b1071)
+![Screenshot (2919)](https://github.com/user-attachments/assets/5146faa2-4c8d-4b2e-8968-4856ee31079f)
+![Screenshot (2920)](https://github.com/user-attachments/assets/7b462d78-ad33-46f1-8806-9c56d828bfad)
+![resnet](https://github.com/user-attachments/assets/197076d5-1e6e-4ee0-90ad-3031e150a848)
+
 # Technologies Used
   * Deep Learning Models: ResNet, CLIP, DinoV2, ViT
   * Faiss: For fast similarity search and indexing.
@@ -79,12 +84,6 @@ This will start the Streamlit app, allowing you to upload query images and perfo
 
 # Application Demo Link
 https://image-similarity-search-ekwtcdyte3hcwgyqhsh25c.streamlit.app/
-
-![Screenshot (2921)](https://github.com/user-attachments/assets/96f153b9-ae7f-4c45-b29c-c11d5b2ebcd4)
-![Screenshot (2919)](https://github.com/user-attachments/assets/5146faa2-4c8d-4b2e-8968-4856ee31079f)
-![Screenshot (2920)](https://github.com/user-attachments/assets/7b462d78-ad33-46f1-8806-9c56d828bfad)
-
-
 
 
 # Acknowledgments  
