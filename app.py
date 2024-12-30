@@ -135,6 +135,22 @@ from PIL import Image
 
 import requests
 
+# Function to load an image from the local folder based on the country name
+def load_local_image(image_path):
+    
+    # Path to the local image file
+    image_path = os.path.join(BASE_DIR,image_path)
+
+    # Check if the image exists in the folder
+    if os.path.exists(image_path):
+        return Image.open(image_path)
+    else:
+        print(f"{image_path}  not found.")
+        return None
+    
+    
+
+
 def download_image(img_path):
     local_path = os.path.join(BASE_DIR, img_path)
     # https://raw.githubusercontent.com/<Rukhsar111>/<Image-Similarity-Search.git>/<main>/data/merged/
@@ -168,9 +184,10 @@ def visualize_results(query_image, retrieved_images, container_width=5):
         for j, col in enumerate(cols):
             if i + j < len(retrieved_images):
                 img_path = retrieved_images[i + j]
-                img_path=download_image(img_path=img_path)
+                # img_path=download_image(img_path=img_path)
+                img_path=load_local_image(img_path)
                 print('new_path', img_path)
-                img = Image.open(img_path)
+                # img = Image.open(img_path)
                 col.image(img_path, caption=f"Match {i + j + 1}", use_container_width=True)
 
    
